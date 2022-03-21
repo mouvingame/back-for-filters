@@ -17,13 +17,13 @@ public class Filter {
     private String name;
 
     @ElementCollection
-    @CollectionTable(name = "CRITERIES", joinColumns = @JoinColumn(name = "FILTER_ID"))
+    @CollectionTable(name = "CRITERIA", joinColumns = @JoinColumn(name = "FILTER_ID"))
     @org.hibernate.annotations.CollectionId(
             column = @Column(name = "ID"),
             type = @org.hibernate.annotations.Type(type = "long"),
             generator = StringConstants.ID_GENERATOR
     )
-    private Collection<Criteria> criteries = new ArrayList<>();
+    private Collection<Criterion> criteria = new ArrayList<>();
 
     @Column(name = "SELECTION", nullable = false)
     private Byte selection;
@@ -40,8 +40,8 @@ public class Filter {
         this.name = name;
     }
 
-    public Collection<Criteria> getCriteries() {
-        return criteries;
+    public Collection<Criterion> getCriteria() {
+        return criteria;
     }
 
     public Byte getSelection() {

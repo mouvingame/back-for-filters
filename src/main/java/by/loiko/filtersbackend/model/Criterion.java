@@ -6,31 +6,31 @@ import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 
 @Embeddable
-public class Criteria {
+public class Criterion {
     @Column(name = "TYPE", nullable = false)
     @Enumerated(EnumType.STRING)
-    private CriteriaType type;
+    private Type type;
 
     @Column(name = "CONDITION", nullable = false)
     @Enumerated(EnumType.STRING)
-    private ComparingCondition condition;
+    private Condition condition;
 
     @Column(name = "VALUE", nullable = false)
     private String value;
 
-    public CriteriaType getType() {
+    public Type getType() {
         return type;
     }
 
-    public void setType(CriteriaType type) {
+    public void setType(Type type) {
         this.type = type;
     }
 
-    public ComparingCondition getCondition() {
+    public Condition getCondition() {
         return condition;
     }
 
-    public void setCondition(ComparingCondition condition) {
+    public void setCondition(Condition condition) {
         this.condition = condition;
     }
 

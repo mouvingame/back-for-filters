@@ -1,6 +1,6 @@
 package by.loiko.filtersbackend.model;
 
-public enum CriteriaType {
+public enum Type {
     AMOUNT,
     TITLE,
     DATE,
